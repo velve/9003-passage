@@ -6,27 +6,7 @@ cd kernel
 cd ..
 cp kernel/arch/arm/boot/zImage imagetool/kernel/zImage -v
 
-## Step 1: Clean ramdisk
-cp --remove-destination kernel/crypto/pcbc.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/crypto/pcbc.ko
-###Storage
-cp --remove-destination kernel/drivers/bluetooth/btwilink.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/drivers/bluetooth/btwilink.ko
-cp --remove-destination kernel/drivers/misc/ti-st/st_drv.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/drivers/misc/ti-st/st_drv.ko
-cp --remove-destination kernel/drivers/scsi/scsi_wait_scan.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/drivers/scsi/scsi_wait_scan.ko
-cp --remove-destination kernel/samsung/battery/samsung_battery.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/battery/samsung_battery.ko
-cp --remove-destination kernel/samsung/bma222/yas_acc_kernel_driver.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/bma222/yas_acc_kernel_driver.ko
-cp --remove-destination kernel/samsung/fm_si4709/Si4709_driver.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/fm_si4709/Si4709_driver.ko
-cp --remove-destination kernel/samsung/gp2a/gp2a.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/gp2a/gp2a.ko
-cp --remove-destination kernel/samsung/gps/gps.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/gps/gps.ko
-###J4FS
-cp --remove-destination kernel/samsung/orientation/yas_ori_kernel_driver.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/orientation/yas_ori_kernel_driver.ko
-cp --remove-destination kernel/samsung/param/param.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/param/param.ko
-###RFS&FSR
-cp --remove-destination kernel/samsung/vibetonz/vibetonz.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/vibetonz/vibetonz.ko
-cp --remove-destination kernel/samsung/yas529/yas_mag_kernel_driver.ko ramdisk_clean/lib/modules/2.6.35.7/kernel/samsung/yas529/yas_mag_kernel_driver.ko
-
-## Step 2: Universal CF-root ramdisk
 cp --remove-destination kernel/crypto/pcbc.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/crypto/pcbc.ko
-###Storage
 cp --remove-destination kernel/drivers/bluetooth/btwilink.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/drivers/bluetooth/btwilink.ko
 cp --remove-destination kernel/drivers/misc/ti-st/st_drv.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/drivers/misc/ti-st/st_drv.ko
 cp --remove-destination kernel/drivers/scsi/scsi_wait_scan.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/drivers/scsi/scsi_wait_scan.ko
@@ -35,10 +15,8 @@ cp --remove-destination kernel/samsung/bma222/yas_acc_kernel_driver.ko ramdisk_u
 cp --remove-destination kernel/samsung/fm_si4709/Si4709_driver.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/fm_si4709/Si4709_driver.ko
 cp --remove-destination kernel/samsung/gp2a/gp2a.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/gp2a/gp2a.ko
 cp --remove-destination kernel/samsung/gps/gps.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/gps/gps.ko
-###J4FS
 cp --remove-destination kernel/samsung/orientation/yas_ori_kernel_driver.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/orientation/yas_ori_kernel_driver.ko
 cp --remove-destination kernel/samsung/param/param.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/param/param.ko
-###RFS&FSR
 cp --remove-destination kernel/samsung/vibetonz/vibetonz.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/vibetonz/vibetonz.ko
 cp --remove-destination kernel/samsung/yas529/yas_mag_kernel_driver.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/samsung/yas529/yas_mag_kernel_driver.ko
 cp --remove-destination kernel/fs/mbcache.ko ramdisk_universal/lib/modules/2.6.35.7/kernel/fs/mbcache.ko
